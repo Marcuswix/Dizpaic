@@ -1,0 +1,329 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=DM+Sans:opsz@9..40&family=Inter:wght@300;400;500;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans&family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body
+{
+    font-family: 'Comfortaa', cursive;
+}
+
+// Section padding
+.section
+{
+    padding-inline: 14rem;
+}
+
+h1
+{
+    font-weight: 900;
+}
+
+.btn-green
+{
+    text-decoration: none;
+    padding: 12px 30px;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    background-color: #71BF44;
+    transition: ease-out 80ms;
+
+    &:hover
+    {
+        background-color: #61A43A;
+        transition: ease-in 80ms;
+    }
+}
+
+//Header
+.header
+{
+    background-color: #140B26;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 14rem;
+    padding-block: 1rem;
+
+    #menu-btn
+    {
+        padding: 12px 18px;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: white;
+        border: solid 2px white;
+
+        i
+        {
+            margin-right: 0.5rem;
+        }
+    }
+
+    #logotype-big
+    {
+        width: 104px;
+        height: auto;
+    }
+}
+
+// Section 1 - "Showcase"
+.showcase
+{
+    background-color: #F2EEE9;
+    padding-block: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    h1
+    {
+        font-size: 5.4rem;
+        margin-inline: 16rem;
+        margin-bottom: 3rem;
+    }
+
+    .yellow-dote
+    {
+        width: 1.2rem;
+        height: 1.2rem;
+        background-color: #FFC20E;
+        border-radius: 50%;
+        position: absolute;
+        right: 28%;
+        top: 46.5%;
+    }
+
+    p
+    {
+        margin-bottom: 3rem;
+    }
+}
+
+
+// Section 2 - "Services"
+.services
+{
+    background-color: #F2EEE9;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    column-gap: 2rem;
+    position: relative;
+    padding-bottom: 6rem;
+
+    .container
+    {
+        background-color: white;
+        height: 100%;
+        padding-block: 2rem;
+        padding-inline: 0.5rem;
+        border-radius: 0.5rem;
+        position: relative;
+
+        h3
+        {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        a
+        {
+            color:#140B26;
+            text-decoration: none;
+        }
+
+        .image-container
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+        }
+
+        p
+        {
+            padding-bottom: 6rem;
+        }
+
+        i
+        {
+            position: absolute;
+            right: 6%;
+            bottom: 4%;
+            font-size: 1.1rem;
+            transition: ease-out 400ms;
+
+            &:hover
+            {
+                transition: ease-in 150ms;
+                right: 4.5%;
+            }
+        }
+    }
+
+}
+
+// Section 3 - "Goals"
+.goals
+{
+    background-color: #140B26;
+    padding-block: 6rem;
+    display: flex;
+
+    .container
+    {
+        display: block;
+        margin: auto;
+        color: white;
+        margin-right: 2rem;
+        position: relative;
+
+        .yellow-dote
+        {
+            width: 0.6rem;
+            height: 0.6rem;
+            background-color: #FFC20E;
+            border-radius: 50%;
+            position: absolute;
+            right: 5.5%;
+            top:10.5%;
+        }
+    }
+}
+
+// Section 4 - "Idé to reality"
+.ide
+{
+    padding-top: 6rem;
+    background-color: #F2EEE9;
+
+    .container
+    {
+        color: #140B26;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-bottom: 4rem;
+
+        .yellow-dote
+        {
+            width: 0.6rem;
+            height: 0.6rem;
+            background-color: #FFC20E;
+            border-radius: 50%;
+            position: absolute;
+            left: 35.6%;
+            top:20%;
+        }
+    
+        .text-container
+        {
+            width: 40%;
+    
+            a
+            {
+                color:#61A43A;
+                text-decoration: underline;
+                transition: ease-out 80ms;
+    
+                &:hover
+                {
+                    color:#71BF44;
+                    text-decoration: underline;
+                    transition: ease-in 80ms;
+                }
+            }
+        }
+
+
+    }
+
+    a
+    {
+        color: #140B26;
+        text-decoration: none;
+
+        &:hover
+        {
+            color: #140b2693;
+
+            h2
+            {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .container-case
+    {
+        display: flex;
+        background-color: white;
+        position: relative;
+
+        .text-container
+        {
+            display: block;
+            margin: auto;
+            padding: 2rem;
+            
+
+            .border
+            {
+                width: 2.8rem;
+                height: 5px;
+                background-color: #61A43A;
+                border: none;
+                border-radius: 0.2rem;
+                margin-top: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            b
+            {
+                font-size: 0.9rem;
+            }
+
+            h2
+            {
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+        }
+
+        i
+        {
+            position: absolute;
+            left: 39%;
+            bottom: 3%;
+            font-size: 1.1rem;
+            transition: ease-out 400ms;
+
+            &:hover
+            {
+                transition: ease-in 150ms;
+                left: 39.5%;
+            }
+        }
+    }
+
+    #trees
+    {
+        width: 58%;
+    }
+
+   
+}
+
+// Section 5 - "Cases"
+.cases
+{
+    padding-block: 1rem;
+}
+
+
+
