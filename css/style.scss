@@ -12,11 +12,63 @@ body
     padding-inline: 14rem;
 }
 
+// Green short borders in different sections
+.border
+{
+    width: 2.8rem;
+    height: 5px;
+    background-color: #61A43A;
+    border: solid 1px #61A43A;
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 h1
 {
     font-weight: 900;
+    font-size: 3.2rem;
+    position: relative;
 }
 
+h1::after
+{
+    content: "•";
+    margin-left: 0.5%;
+    color: #FFC20E;
+    position: absolute;
+    bottom: -12%;
+}
+
+h3
+{
+    position: relative;
+}
+
+h3::after
+{
+    content: "•";
+    margin-left: 0.5%;
+    color: #FFC20E;
+    position: absolute;
+    bottom: -12%;
+}
+
+h2
+{
+    position: relative;
+}
+
+h2::after
+{
+    content: "•";
+    margin-left: 0.5%;
+    color: #FFC20E;
+    position: absolute;
+    bottom: -12%;
+}
+
+// Green buttons
 .btn-green
 {
     text-decoration: none;
@@ -34,6 +86,12 @@ h1
     }
 }
 
+// Green arrows
+.fa-solid.fa-arrow-right
+{
+    color:#71BF44;
+}
+
 //Header
 .header
 {
@@ -43,6 +101,9 @@ h1
     align-items: center;
     padding-inline: 14rem;
     padding-block: 1rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 
     #menu-btn
     {
@@ -68,11 +129,12 @@ h1
     }
 }
 
-// Section 1 - "Showcase"
+// Section 1 - "Förverkliga"
 .showcase
 {
     background-color: #F2EEE9;
-    padding-block: 6rem;
+    padding-bottom: 6rem;
+    padding-top: 12rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,17 +148,6 @@ h1
         margin-bottom: 3rem;
     }
 
-    .yellow-dote
-    {
-        width: 1.2rem;
-        height: 1.2rem;
-        background-color: #FFC20E;
-        border-radius: 50%;
-        position: absolute;
-        right: 28%;
-        top: 46.5%;
-    }
-
     p
     {
         margin-bottom: 3rem;
@@ -104,7 +155,7 @@ h1
 }
 
 
-// Section 2 - "Services"
+// Section 2 - "Våra tjänster"
 .services
 {
     background-color: #F2EEE9;
@@ -168,7 +219,7 @@ h1
 
 }
 
-// Section 3 - "Goals"
+// Section 3 - "Våra mål"
 .goals
 {
     background-color: #140B26;
@@ -180,50 +231,27 @@ h1
         display: block;
         margin: auto;
         color: white;
-        margin-right: 2rem;
+        margin-right: 2.8rem;
         position: relative;
-
-        .yellow-dote
-        {
-            width: 0.6rem;
-            height: 0.6rem;
-            background-color: #FFC20E;
-            border-radius: 50%;
-            position: absolute;
-            right: 5.5%;
-            top:10.5%;
-        }
     }
 }
 
-// Section 4 - "Idé to reality"
+// Section 4 - "Idé till verklighet"
 .ide
 {
-    padding-top: 6rem;
-    background-color: #F2EEE9;
+    padding-block: 6rem;
+    background-color: #F2EEE9;;
 
-    .container
+    .container-my
     {
         color: #140B26;
         display: flex;
         justify-content: space-between;
         position: relative;
-        padding-bottom: 4rem;
-
-        .yellow-dote
-        {
-            width: 0.6rem;
-            height: 0.6rem;
-            background-color: #FFC20E;
-            border-radius: 50%;
-            position: absolute;
-            left: 35.6%;
-            top:20%;
-        }
     
         .text-container
         {
-            width: 40%;
+            width: 42%;
     
             a
             {
@@ -239,10 +267,14 @@ h1
                 }
             }
         }
-
-
     }
+}
 
+// Section 5 and 7 - "Case Södra & Holmgrens"
+.case
+{
+    background-color: #F2EEE9;
+    
     a
     {
         color: #140B26;
@@ -250,12 +282,7 @@ h1
 
         &:hover
         {
-            color: #140b2693;
-
-            h2
-            {
-                text-decoration: underline;
-            }
+            color:#140b26b8;
         }
     }
 
@@ -264,34 +291,31 @@ h1
         display: flex;
         background-color: white;
         position: relative;
+        border-radius: 0.5rem;
 
         .text-container
         {
             display: block;
             margin: auto;
-            padding: 2rem;
-            
-
-            .border
-            {
-                width: 2.8rem;
-                height: 5px;
-                background-color: #61A43A;
-                border: none;
-                border-radius: 0.2rem;
-                margin-top: 0.5rem;
-                margin-bottom: 1rem;
-            }
+            padding: 3rem;
+            position: relative;
 
             b
             {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             h2
             {
                 font-weight: 600;
+                margin-top: 2rem;
                 margin-bottom: 1rem;
+            }
+
+            .holmgren
+            {
+            left: 27.5%;
+            top:67.3%;
             }
         }
 
@@ -313,17 +337,193 @@ h1
 
     #trees
     {
-        width: 58%;
+        width: 56%;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem; 
     }
-
-   
 }
 
-// Section 5 - "Cases"
+// Section 8 - "Entreprenörer"
 .cases
 {
-    padding-block: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding-bottom: 2rem;
+    background-color: #F2EEE9;
+
+    #first-box
+    {
+        grid-column: 1 / 2;
+    }
+
+    .container
+    {
+        padding: 0;
+        background-color: white;
+        border-radius: 0.5rem;
+        
+        a
+        {
+            text-decoration: none;
+            color: #140B26;
+
+            &:hover
+            {
+                color:#140b26b8;
+            }
+
+            b
+            {
+                font-size: 0.7rem;
+            }
+
+            h3
+            {
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.6rem;
+            }
+        }
+
+        .image-case
+        {
+            width: 100%;
+            border-start-start-radius: 0.5rem;
+            border-start-end-radius: 0.5rem;
+        }
+
+        .text-container
+        {
+            margin-right: 6rem;
+            padding: 2rem;
+            padding-bottom: 4rem;
+        }
+
+    }
 }
+
+// Section 9 - "Marknader"
+.markets
+{
+    padding-block: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    background-color: #281B44;
+
+    a
+    {
+        color: black;
+        text-decoration: none;
+
+        h5
+        {
+            font-size: 1.1rem;
+        }
+
+        &:hover
+        {
+            h5
+            {
+                text-decoration: underline 2px #61A43A;
+            }  
+        }
+    }
+
+    #headline
+    {
+        grid-column: 1 / 4;
+        margin: 0;
+        padding: 0; 
+    }
+
+    h4{
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0; 
+    }
+
+    p{
+        font-size: 0.9rem;
+    }
+
+    .container
+    {
+        padding: 0;
+
+        #headline-item
+        {
+            background-color: #281B44;
+            color: white;
+            padding: 0rem; 
+            padding-bottom: 1rem;
+        }
+        
+        .container-item
+        {
+            background-color: white;
+            padding-inline: 2rem;
+            padding-top: 2.2rem;
+            padding-bottom: 1.2rem;
+            border-radius: 0.5rem;
+            position: relative;
+            transition: ease-out 120ms; 
+            
+            i
+            {
+                position: absolute;
+                bottom: 6%;
+                right:4%;
+            }
+            
+            &:hover
+            {
+                i     
+                {
+                    transition: ease-in 120ms;
+                    bottom: 6%;
+                    right:3%;
+                }
+            }
+        }
+    }
+}
+
+// Section 11 & 12 - "Innovation & Entreprenörsresan"
+.case
+{
+    padding-bottom: 1.5rem;
+    .btn-green
+    {
+        display: inline;
+    }
+}
+
+// Section 13 - "Kaffe"
+.coffee
+{
+    background-color: #281B44;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    form
+    {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        .input
+        {
+padding: 1rem; 
+        }
+    }
+
+}
+
 
 
 
