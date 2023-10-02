@@ -10,7 +10,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/Dizpiac-logo.png" type="icon image">
-<title>Dizpaic</title>
+<link rel="stylesheet" href="js/script.js">
+<title>Dizparc</title>
 </head>
 <body>
 
@@ -20,6 +21,23 @@
     <a href="index.html"><img id="logotype-big" src="images/dizpiac-logo-big.png" alt="Dizpaic logotype"></a>
     <a class="btn-green" href="https://dizparc.se/kontakta-oss">Kontakta oss</a>
 </header>
+
+<!-- Section "Menu" -->
+<section class="header outer-menu">
+    <!-- Menu -->
+    <div id="overlay"></div>
+        <nav id="menu" class="">
+          <ul class="menu">
+            <a href="index.html"><li><img id="logotype-menu" src="images/dizpiac-logo-big.png" alt="Dizparc logotype"></li></a>
+            <a href="https://dizparc.se/erbjudande"><li>Erbjudande</li></a>
+            <a href="https://dizparc.se/case"><li>Case</li></a>
+            <a href="https://dizparc.se/case"><li>Jobb</li></a>
+            <a href="https://dizparc.se/nyheter-och-event"><li>Nyheter & Event</li></a>
+            <a href="https://dizparc.se/om-oss"><li>Om Oss</li></a>
+            <a href="https://dizparc.se/hallbarhet"><li>Hållbarhet</li></a>
+          </ul>
+        </nav>
+</section>
 
 <!-- Section 1 - "Förverkliga" -->
 <section class="section showcase">
@@ -345,20 +363,41 @@
 
 <!-- Section 13 - "Kaffe" -->
 <section class="section coffee">
-    <div class="text-container">
+    <div class="container">
         <h1>Låt oss ta en kaffe</h1>
-        <p>Ta en kontakt så hör vi av oss.</p>
-        <form>
-            <input class="input" id="name" title="name" type="text" placeholder="Namn*"></input>
+        <br><p>Ta en kontakt så hör vi av oss.<br><br></p>
+        <form class="input" method="post" action="#">
+            <input id="name" title="name" type="text" placeholder="Namn*"></input>
             <input id="email" title="email" type="email" placeholder="E-post*"></input>
             <input id="city" title="city" type="text" placeholder="Stad*"></input>
-            <input id="meassage" title="message" type="text" placeholder="Beskriv ditt ärende*"></input>
-            <input id="checkbox" title="checkbox" type="checkbox"></input>
-            <button class="btn-green" id="send" title="send" type="submit" placeholder="Namn">Skicka</button>
+            <textarea id="meassage" title="message" type="text" placeholder="Beskriv ditt ärende*"></textarea>
+            <label class="container-checkbox">
+                <input type="checkbox" checked="checked">
+                <div class="checkmark"></div>
+                <b>Jag samtycker till att ta emot andra utskick från dizparc.se.*</b>
+              </label>
+            <p>Du kan när som helst avsluta prenumerationen på dessa meddelanden. Mer information om vårt engagemang för att skydda och respektera din integritet finns i vår <a href="https://dizparc.se/integritetspolicy">Integritetspolicy</a>.</p>
+            <p><br>Genom att klicka nedan ger du ditt godkännande till att dizparc.se lagrar och behandlar personuppgifterna ovan i syfte att kunna tillhandahålla det begärda innehållet.</p></input>
+            <input class="btn-green" id="send" title="send" type="submit" placeholder="Skicka" onclick="alert('Tack för ditt meddelande')"></input>
+        </div>   
         </form>
 </section>
 
+<!-- FOOTER -->
+<section class="section footer">
+    <img id="logo-footer" src="images/dizpiac-logo-big.png" alt="Dizparc logotype">
+    <div>
+        <a href="https://www.facebook.com/dizparc"><b>FACEBOOK</b></a>
+        <a href="https://www.instagram.com/dizparc/"><b>INSTAGRAM</b></a>
+        <a href="https://www.linkedin.com/company/dizparc/"><b>LINKEDIN</b></a>
+    </div>
+    <div class="copyright">
+    <p>© Dizparc 2021 </p><a href="https://dizparc.se/integritetspolicy">Integritespolicy</a>
+    </div>
+</section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

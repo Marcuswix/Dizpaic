@@ -1,6 +1,6 @@
 
+// Font-family
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=DM+Sans:opsz@9..40&family=Inter:wght@300;400;500;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans&family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap');
-
 body
 {
     font-family: 'Comfortaa', cursive;
@@ -24,6 +24,7 @@ body
     margin-bottom: 1rem;
 }
 
+// Headlines styling
 h1
 {
     font-weight: 900;
@@ -33,11 +34,10 @@ h1
 
 h1::after
 {
-    content: "•";
-    margin-left: 0.5%;
+    content: ".";
+    font-size: 5rem;
+    margin-left: 0.2rem;
     color: #FFC20E;
-    position: absolute;
-    bottom: -12%;
 }
 
 h3
@@ -47,11 +47,10 @@ h3
 
 h3::after
 {
-    content: "•";
-    margin-left: 0.5%;
+    content: ".";
+    font-size: 2rem;
+    margin-left: 0.2rem;
     color: #FFC20E;
-    position: absolute;
-    bottom: -12%;
 }
 
 h2
@@ -61,11 +60,10 @@ h2
 
 h2::after
 {
-    content: "•";
-    margin-left: 0.5%;
+    content: ".";
+    font-size: 3rem;
+    margin-left: 0.2rem;
     color: #FFC20E;
-    position: absolute;
-    bottom: -12%;
 }
 
 // Green buttons
@@ -77,12 +75,11 @@ h2::after
     border: none;
     border-radius: 2rem;
     background-color: #71BF44;
-    transition: ease-out 80ms;
+    transition: background-color 100ms ease-in-out;
 
     &:hover
     {
         background-color: #61A43A;
-        transition: ease-in 80ms;
     }
 }
 
@@ -90,6 +87,23 @@ h2::after
 .fa-solid.fa-arrow-right
 {
     color:#71BF44;
+}
+
+//Overlay on bar-menu
+#overlay 
+{
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(5px);
+    background-color: rgba(220, 220, 220, 0.249);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms;
+
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+    }
 }
 
 //Header
@@ -105,6 +119,12 @@ h2::after
     z-index: 1;
     width: 100%;
 
+    a
+    {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }  
+
     #menu-btn
     {
         padding: 12px 18px;
@@ -115,6 +135,14 @@ h2::after
         background-color: transparent;
         color: white;
         border: solid 2px white;
+        transition: background-color ease-in-out 100ms;
+        transition: box-shadow ease-in-out 100ms;
+
+        &:hover
+        {
+            background-color:  rgba(255, 255, 255, 0.225);
+            box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.477);
+        }
 
         i
         {
@@ -126,7 +154,65 @@ h2::after
     {
         width: 104px;
         height: auto;
+        border-radius: 1rem;
+        transition: background-color ease-in-out 100ms;
+        transition: box-shadow ease-in-out 100ms;
+
+        &:hover
+        {
+            background-color:  rgba(255, 255, 255, 0.225);
+            box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.477);
+        }
     }
+}
+
+// Section Menu
+.outer-menu
+{
+    padding: 0;
+
+    #menu {
+        display: block;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #140B26;
+        padding: 0; 
+        z-index: 2;
+        top: 0;
+        left: -100%;
+        transition: left 300ms;
+
+        &.open {
+            left: 0;
+        }
+      }
+
+      ul
+      {
+        padding: 0;
+      }
+      
+      #logotype-menu
+      {
+        width:30%;
+        height: auto;
+        padding-top:1rem;
+      }
+      
+      .menu li 
+      {
+        padding: 1.5rem; 
+        color: white;
+        list-style-type: none;
+        border: solid 1px #281B44;
+
+        &:hover
+        {
+            background-color: #281B44;
+        }
+      }
 }
 
 // Section 1 - "Förverkliga"
@@ -146,6 +232,16 @@ h2::after
         font-size: 5.4rem;
         margin-inline: 16rem;
         margin-bottom: 3rem;
+        line-height: 6rem;
+        font-weight: 900;
+    }
+
+    h1::after
+    {
+    content: ".";
+    font-size: 10rem;
+    margin-left: -1rem;
+    color: #FFC20E;
     }
 
     p
@@ -264,6 +360,7 @@ h2::after
                     color:#71BF44;
                     text-decoration: underline;
                     transition: ease-in 80ms;
+                    cursor: pointer;
                 }
             }
         }
@@ -506,22 +603,176 @@ h2::after
 {
     background-color: #281B44;
     color: white;
-    display: flex;
-    justify-content: center;
+    display: block;
+    margin: auto;
     text-align: center;
+    padding-block: 8rem;
 
-    form
+    .container
     {
-        display: grid;
-        align-items: center;
-        justify-content: center;
+        padding-inline: 2rem;
+        display: block;
+        margin: auto;
+        width: 60%;
 
-        .input
+        a
         {
-padding: 1rem; 
+            color: #71BF44;
+            text-decoration: none;
+
+            &:hover
+            {
+                text-decoration: underline;
+            }
+        }
+        
+        input
+        {
+            width:80%;
+            padding: 1rem;
+            display: block;
+            margin: auto;
+            border-radius: 0.5rem;
+            margin-block: 1rem;
+        }
+
+        textarea
+        {
+            width:80%;
+            padding: 1rem;
+            display: block;
+            margin: auto;
+            border-radius: 0.5rem;
+            margin-block: 1rem;
+        }
+    
+        #meassage
+        {
+            padding-bottom: 3rem;
+        }
+
+        p
+        {
+            font-size: 0.8rem;
+        }
+
+        .container-checkbox 
+        {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-block: 2rem;
+        width: 100%;
+         }
+  
+  // Hide the browser's default checkbox 
+    .container-checkbox  input 
+    {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    }
+  
+  // Create a custom checkbox
+    .checkmark 
+    {
+    position: relative;
+    margin-right: 1rem;
+    height: 22px;
+    width: 22px;
+    border: solid 1px #FFC20E;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    }
+  
+  // Create the checkmark/indicator (hidden when not checked)
+    .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    }
+  
+  // Show the checkmark when checked
+    .container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+    margin: auto;
+    }
+  
+  // Style the checkmark/indicator
+    .container-checkbox .checkmark:after 
+    {
+    left: 35%;
+    top: 10%;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0px 2px 3px 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    }
+
+        #send
+        {
+            width: 40%;
+            border-radius: 2rem;
+            margin-top: 3rem;
+        }
+    }
+}
+
+// FOOTER
+.footer
+{
+    background-color: #140B26;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding-block: 1rem;
+
+    p{
+        margin-bottom: 0rem;
+        font-size: 0.8rem;
+    }
+
+    #logo-footer
+    {
+        width: 6rem;
+        height: auto;
+        transition: background-color ease-in-out 100ms;
+        transition: box-shadow ease-in-out 100ms;
+        border-radius: 1rem;
+        cursor: pointer;
+        
+        &:hover
+        {
+            background-color:  rgba(255, 255, 255, 0.225);
+            box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.477);
+        }
+    }
+    
+    a
+    {
+        color: white;
+        text-decoration: none;
+        margin-inline: 1rem;
+        font-size: 0.8rem;
+
+        &:hover
+        {
+            text-decoration: underline;
         }
     }
 
+    .copyright
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
 
 

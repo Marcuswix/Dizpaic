@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=DM+Sans:opsz@9..40&family=Inter:wght@300;400;500;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans&family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap");
 body {
   font-family: "Comfortaa", cursive;
@@ -25,11 +24,10 @@ h1 {
 }
 
 h1::after {
-  content: "•";
-  margin-left: 0.5%;
+  content: ".";
+  font-size: 5rem;
+  margin-left: 0.2rem;
   color: #FFC20E;
-  position: absolute;
-  bottom: -12%;
 }
 
 h3 {
@@ -37,11 +35,10 @@ h3 {
 }
 
 h3::after {
-  content: "•";
-  margin-left: 0.5%;
+  content: ".";
+  font-size: 2rem;
+  margin-left: 0.2rem;
   color: #FFC20E;
-  position: absolute;
-  bottom: -12%;
 }
 
 h2 {
@@ -49,11 +46,10 @@ h2 {
 }
 
 h2::after {
-  content: "•";
-  margin-left: 0.5%;
+  content: ".";
+  font-size: 3rem;
+  margin-left: 0.2rem;
   color: #FFC20E;
-  position: absolute;
-  bottom: -12%;
 }
 
 .btn-green {
@@ -63,15 +59,29 @@ h2::after {
   border: none;
   border-radius: 2rem;
   background-color: #71BF44;
-  transition: ease-out 80ms;
+  transition: background-color 100ms ease-in-out;
 }
 .btn-green:hover {
   background-color: #61A43A;
-  transition: ease-in 80ms;
 }
 
 .fa-solid.fa-arrow-right {
   color: #71BF44;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(220, 220, 220, 0.249);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms;
+}
+#overlay.show {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .header {
@@ -85,6 +95,10 @@ h2::after {
   z-index: 1;
   width: 100%;
 }
+.header a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
 .header #menu-btn {
   padding: 12px 18px;
   border-radius: 2rem;
@@ -94,6 +108,12 @@ h2::after {
   background-color: transparent;
   color: white;
   border: solid 2px white;
+  transition: background-color ease-in-out 100ms;
+  transition: box-shadow ease-in-out 100ms;
+}
+.header #menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.225);
+  box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.477);
 }
 .header #menu-btn i {
   margin-right: 0.5rem;
@@ -101,6 +121,50 @@ h2::after {
 .header #logotype-big {
   width: 104px;
   height: auto;
+  border-radius: 1rem;
+  transition: background-color ease-in-out 100ms;
+  transition: box-shadow ease-in-out 100ms;
+}
+.header #logotype-big:hover {
+  background-color: rgba(255, 255, 255, 0.225);
+  box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.477);
+}
+
+.outer-menu {
+  padding: 0;
+}
+.outer-menu #menu {
+  display: block;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #140B26;
+  padding: 0;
+  z-index: 2;
+  top: 0;
+  left: -100%;
+  transition: left 300ms;
+}
+.outer-menu #menu.open {
+  left: 0;
+}
+.outer-menu ul {
+  padding: 0;
+}
+.outer-menu #logotype-menu {
+  width: 30%;
+  height: auto;
+  padding-top: 1rem;
+}
+.outer-menu .menu li {
+  padding: 1.5rem;
+  color: white;
+  list-style-type: none;
+  border: solid 1px #281B44;
+}
+.outer-menu .menu li:hover {
+  background-color: #281B44;
 }
 
 .showcase {
@@ -117,6 +181,14 @@ h2::after {
   font-size: 5.4rem;
   margin-inline: 16rem;
   margin-bottom: 3rem;
+  line-height: 6rem;
+  font-weight: 900;
+}
+.showcase h1::after {
+  content: ".";
+  font-size: 10rem;
+  margin-left: -1rem;
+  color: #FFC20E;
 }
 .showcase p {
   margin-bottom: 3rem;
@@ -205,6 +277,7 @@ h2::after {
   color: #71BF44;
   text-decoration: underline;
   transition: ease-in 80ms;
+  cursor: pointer;
 }
 
 .case {
@@ -371,15 +444,128 @@ h2::after {
 .coffee {
   background-color: #281B44;
   color: white;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-block: 8rem;
+}
+.coffee .container {
+  padding-inline: 2rem;
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+.coffee .container a {
+  color: #71BF44;
+  text-decoration: none;
+}
+.coffee .container a:hover {
+  text-decoration: underline;
+}
+.coffee .container input {
+  width: 80%;
+  padding: 1rem;
+  display: block;
+  margin: auto;
+  border-radius: 0.5rem;
+  margin-block: 1rem;
+}
+.coffee .container textarea {
+  width: 80%;
+  padding: 1rem;
+  display: block;
+  margin: auto;
+  border-radius: 0.5rem;
+  margin-block: 1rem;
+}
+.coffee .container #meassage {
+  padding-bottom: 3rem;
+}
+.coffee .container p {
+  font-size: 0.8rem;
+}
+.coffee .container .container-checkbox {
   display: flex;
   justify-content: center;
-  text-align: center;
+  position: relative;
+  margin-block: 2rem;
+  width: 100%;
 }
-.coffee form {
-  display: grid;
+.coffee .container .container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.coffee .container .checkmark {
+  position: relative;
+  margin-right: 1rem;
+  height: 22px;
+  width: 22px;
+  border: solid 1px #FFC20E;
+  border-radius: 0.3rem;
+  background-color: transparent;
+}
+.coffee .container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.coffee .container .container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+  margin: auto;
+}
+.coffee .container .container-checkbox .checkmark:after {
+  left: 35%;
+  top: 10%;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0px 2px 3px 0px;
+  transform: rotate(45deg);
+}
+.coffee .container #send {
+  width: 40%;
+  border-radius: 2rem;
+  margin-top: 3rem;
+}
+
+.footer {
+  background-color: #140B26;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  color: white;
+  padding-block: 1rem;
 }
-.coffee form .input {
-  padding: 1rem;
+.footer p {
+  margin-bottom: 0rem;
+  font-size: 0.8rem;
+}
+.footer #logo-footer {
+  width: 6rem;
+  height: auto;
+  transition: background-color ease-in-out 100ms;
+  transition: box-shadow ease-in-out 100ms;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.footer #logo-footer:hover {
+  background-color: rgba(255, 255, 255, 0.225);
+  box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.477);
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+  margin-inline: 1rem;
+  font-size: 0.8rem;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
