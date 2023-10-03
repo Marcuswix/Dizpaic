@@ -10,6 +10,16 @@ body
 .section
 {
     padding-inline: 14rem;
+
+    @media (max-width: 1600px)
+    {
+        padding-inline: 3rem;
+    }
+
+    @media (max-width: 768px)
+    {
+        padding: 1rem;
+    }
 }
 
 // Green short borders in different sections
@@ -30,14 +40,38 @@ h1
     font-weight: 900;
     font-size: 3.2rem;
     position: relative;
+
+    @media(max-width:1200px)
+    {
+        line-height: 2.5rem;
+        padding-block: 0.5rem;
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    @media(max-width: 768px)
+    {
+        padding-block: 1rem;
+    }
 }
 
 h1::after
 {
     content: ".";
     font-size: 5rem;
+    line-height: 0rem;
     margin-left: 0.2rem;
     color: #FFC20E;
+
+    @media(max-width: 1200px)
+    { 
+        font-size: 2rem;
+    }
+
+    @media(max-width: 768px)
+    { 
+        font-size: 3rem;
+    }
 }
 
 h3
@@ -51,6 +85,7 @@ h3::after
     font-size: 2rem;
     margin-left: 0.2rem;
     color: #FFC20E;
+    line-height: 0rem;
 }
 
 h2
@@ -64,6 +99,7 @@ h2::after
     font-size: 3rem;
     margin-left: 0.2rem;
     color: #FFC20E;
+    line-height: 0rem;
 }
 
 // Green buttons
@@ -119,6 +155,11 @@ h2::after
     z-index: 1;
     width: 100%;
 
+    @media (max-width: 1600px)
+    {
+        padding: 1rem;
+    }
+
     a
     {
         color: rgb(255, 255, 255);
@@ -148,6 +189,11 @@ h2::after
         {
             margin-right: 0.5rem;
         }
+
+        @media (max-width: 600px)
+        {
+            display: none;
+        }
     }
 
     #logotype-big
@@ -164,6 +210,26 @@ h2::after
             box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.477);
         }
     }
+
+        #contact-btn
+        {@media (max-width: 600px)
+        {
+            display: none;
+        }
+        }
+
+        #mobil-menu
+    {
+        color: white;
+        font-size: 1.4rem;
+        display: none;
+
+        @media (max-width: 600px)
+        {
+            display: flex;
+        }
+    }
+
 }
 
 // Section Menu
@@ -174,6 +240,7 @@ h2::after
     #menu {
         display: block;
         height: 100%;
+        width: 25%;
         position: fixed;
         top: 0;
         left: 0;
@@ -183,6 +250,11 @@ h2::after
         top: 0;
         left: -100%;
         transition: left 300ms;
+
+        @media (max-width: 768px)
+        {
+            width: 60%;
+        }
 
         &.open {
             left: 0;
@@ -199,6 +271,11 @@ h2::after
         width:30%;
         height: auto;
         padding-top:1rem;
+
+        @media (max-width: 768px)
+        {
+            width: 80%;
+        }
       }
       
       .menu li 
@@ -227,6 +304,12 @@ h2::after
     text-align: center;
     position: relative;
 
+    @media (max-width: 768px)
+    {
+        padding: 1rem;
+        padding-top: 8rem; 
+    }
+
     h1
     {
         font-size: 5.4rem;
@@ -234,6 +317,22 @@ h2::after
         margin-bottom: 3rem;
         line-height: 6rem;
         font-weight: 900;
+
+        @media (max-width: 998px)
+        {
+            font-size: 3rem;
+            line-height: 4rem;
+            font-weight: 900;
+        }
+
+        @media (max-width: 768px)
+        {
+            font-size: 2rem;
+            margin-inline: 0rem;
+            margin-bottom: 0rem;
+            line-height: 3rem;
+            font-weight: 900;
+        }
     }
 
     h1::after
@@ -242,6 +341,19 @@ h2::after
     font-size: 10rem;
     margin-left: -1rem;
     color: #FFC20E;
+
+    @media (max-width: 768px)
+    {
+        font-size: 4rem;
+        margin-left: -0.5rem;
+    }
+
+    @media (max-width: 998px)
+    {
+        font-size: 4rem;
+        margin-left: -0.5rem;
+    }
+
     }
 
     p
@@ -262,6 +374,19 @@ h2::after
     column-gap: 2rem;
     position: relative;
     padding-bottom: 6rem;
+
+    @media (max-width: 1400px)
+    {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
+    }
+
+    @media (max-width: 768px)
+    {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        padding: 2rem;
+    }
 
     .container
     {
@@ -321,6 +446,13 @@ h2::after
     background-color: #140B26;
     padding-block: 6rem;
     display: flex;
+    align-items: center;
+
+    @media (max-width: 768px)
+    {
+        flex-direction: column;
+        padding-block: 2rem;
+    }
 
     .container
     {
@@ -328,7 +460,62 @@ h2::after
         margin: auto;
         color: white;
         margin-right: 2.8rem;
-        position: relative;
+        padding: 0;
+        width: 50%;
+
+        @media (max-width: 998px)
+        {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1600px)
+    {
+        #image-goals
+        {
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+    @media (max-width: 768px)
+    {
+        text-align: center;
+
+        .container
+        {
+            order: 2;
+            margin: 0rem;
+            margin-block: 1rem;
+        }
+
+        #image-goals
+        {
+            order: 1;
+        }
+    }
+
+    #entreprenors
+    {
+        width: 60%;
+        height: 60%;
+
+        @media (max-width: 768px)
+        {
+        width: 80%;
+        height: 80%;
+        }
+
+    }
+
+    .btn-green.entre
+    {
+        @media (max-width: 900px)
+        {
+            padding: 1rem;
+            font-size: 0.7rem;
+        }
+        
     }
 }
 
@@ -336,7 +523,13 @@ h2::after
 .ide
 {
     padding-block: 6rem;
-    background-color: #F2EEE9;;
+    background-color: #F2EEE9;
+
+    @media (max-width: 768px)
+    {
+        padding-block: 1rem;
+        text-align: center;
+    }
 
     .container-my
     {
@@ -344,10 +537,23 @@ h2::after
         display: flex;
         justify-content: space-between;
         position: relative;
+
+        @media (max-width: 768px)
+        {
+            display: block;
+            margin: auto;
+        }
     
         .text-container
         {
             width: 42%;
+
+            @media (max-width: 768px)
+            {
+                display: block;
+                margin: auto;
+                width: 100%;
+            }
     
             a
             {
@@ -390,12 +596,48 @@ h2::after
         position: relative;
         border-radius: 0.5rem;
 
+        @media (max-width: 1200px)
+    {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+
+        .text-container
+        {
+            order: 2;
+        }
+    
+        #trees
+        {
+            order: 1;
+            width: 100%;
+            border-top-left-radius: 0.5rem;
+            border-bottom-right-radius: 0rem;
+        }
+    }
+
         .text-container
         {
             display: block;
+            align-self: center;
             margin: auto;
             padding: 3rem;
             position: relative;
+
+            @media (max-width: 768px)
+            {
+                padding: 1rem; 
+        
+                .text-container
+                {
+                    order: 2;
+                }
+        
+                #trees
+                {
+                    order: 1;
+                }
+            }
 
             b
             {
@@ -409,27 +651,29 @@ h2::after
                 margin-bottom: 1rem;
             }
 
-            .holmgren
+            i
             {
-            left: 27.5%;
-            top:67.3%;
+                position: absolute;
+                right: 5%;
+                bottom: -30%;
+                font-size: 1.1rem;
+                transition: ease-out 400ms;
+    
+                &:hover
+                {
+                    transition: ease-in 150ms;
+                    right: 4%;
+                }
+
+
+                @media (max-width: 1600px)
+                {
+                    display: none;
+                }
             }
         }
 
-        i
-        {
-            position: absolute;
-            left: 39%;
-            bottom: 3%;
-            font-size: 1.1rem;
-            transition: ease-out 400ms;
 
-            &:hover
-            {
-                transition: ease-in 150ms;
-                left: 39.5%;
-            }
-        }
     }
 
     #trees
@@ -440,7 +684,7 @@ h2::after
     }
 }
 
-// Section 8 - "Entreprenörer"
+// Section 6 - "Cases"
 .cases
 {
     display: grid;
@@ -449,6 +693,16 @@ h2::after
     row-gap: 2rem;
     padding-bottom: 2rem;
     background-color: #F2EEE9;
+
+    @media (max-width: 1200px)
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 768px)
+    {
+        grid-template-columns: 1fr;
+    }
 
     #first-box
     {
@@ -496,10 +750,23 @@ h2::after
             margin-right: 6rem;
             padding: 2rem;
             padding-bottom: 4rem;
+
+            @media(max-width: 1400px)
+            {
+            margin-right: 2rem;
+            padding: 2rem;
+            }
+
+            @media(max-width: 768px)
+            {
+            margin-right: 0rem;
+            padding: 1rem;
+            }
         }
 
     }
 }
+
 
 // Section 9 - "Marknader"
 .markets
@@ -509,6 +776,18 @@ h2::after
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     background-color: #281B44;
+
+
+    @media (max-width: 768px)
+    {
+        display: block;
+        padding-block: 2rem;
+
+        h4
+        {
+            text-align: center;
+        }
+    }
 
     a
     {
@@ -550,6 +829,11 @@ h2::after
     {
         padding: 0;
 
+        @media (max-width: 768px)
+        {
+            margin-block: 0.5rem;
+        }
+
         #headline-item
         {
             background-color: #281B44;
@@ -567,6 +851,11 @@ h2::after
             border-radius: 0.5rem;
             position: relative;
             transition: ease-out 120ms; 
+
+            @media (max-width: 768px)
+            {
+                padding: 1.5rem;
+            }
             
             i
             {
@@ -608,12 +897,31 @@ h2::after
     text-align: center;
     padding-block: 8rem;
 
+
+    @media (max-width: 768px)
+    {
+        padding-block: 2rem;
+    }
+
+        
+
     .container
     {
         padding-inline: 2rem;
         display: block;
         margin: auto;
         width: 60%;
+
+        @media (max-width: 1200px)
+        {
+        width: 80%;
+        }
+
+        @media (max-width: 768px)
+        {
+            width: 100%;
+            padding-inline: 0rem;
+        }
 
         a
         {
@@ -663,7 +971,8 @@ h2::after
         position: relative;
         margin-block: 2rem;
         width: 100%;
-         }
+        
+        }
   
   // Hide the browser's default checkbox 
     .container-checkbox  input 
@@ -684,6 +993,11 @@ h2::after
     border: solid 1px #FFC20E;
     border-radius: 0.3rem;
     background-color: transparent;
+
+    @media (max-width: 768px)
+    {
+        margin-right: 0.2rem;
+    }
     }
   
   // Create the checkmark/indicator (hidden when not checked)
@@ -731,6 +1045,24 @@ h2::after
     align-items: center;
     color: white;
     padding-block: 1rem;
+    width: 100%;
+
+    @media (max-width: 768px)
+    {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .socialmedia
+    {
+        @media (max-width: 768px)
+        {
+            b
+            {
+                font-size: 0.6rem;
+            }
+        }
+    }
 
     p{
         margin-bottom: 0rem;

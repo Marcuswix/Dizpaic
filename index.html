@@ -7,7 +7,7 @@
 <meta name="keywords" content="">
 <script defer src="https://kit.fontawesome.com/4d5d7d75c3.js" crossorigin="anonymous">
 </script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/Dizpiac-logo.png" type="icon image">
 <link rel="stylesheet" href="js/script.js">
@@ -19,7 +19,8 @@
 <header class="header">
     <button id="menu-btn"><i class="fa-solid fa-bars"></i>Meny</button>
     <a href="index.html"><img id="logotype-big" src="images/dizpiac-logo-big.png" alt="Dizpaic logotype"></a>
-    <a class="btn-green" href="https://dizparc.se/kontakta-oss">Kontakta oss</a>
+    <a id="contact-btn" class="btn-green" href="https://dizparc.se/kontakta-oss">Kontakta oss</a>
+    <div id="mobil-menu"><i class="fa-solid fa-bars"></i></div>
 </header>
 
 <!-- Section "Menu" -->
@@ -65,7 +66,7 @@
         <p><br>Ända sedan Dizparc såg dagens ljus har vår resa varit målet. Vare sig det gäller resan mot att erbjuda marknadens vassaste digitala lösningar, en riktigt grym kundupplevelse, en arbetsplats att längta till eller en inkörsport till entreprenörsdrömmen.<br><br></p>
         <a class="btn-green" href="https://dizparc.se/kontakta-oss">Mer om oss</a>
     </div>
-    <img src="images/gruppkram-i-solnedgången.webp" alt="Four people holding each other at sunrise">
+    <img id="image-goals" src="images/gruppkram-i-solnedgången.webp" alt="Four people holding each other at sunrise">
 </section>
 
 <!-- Section 4 - "Idé till verklighet" -->
@@ -86,7 +87,7 @@
         <div class="border"></div>
         <h2>Ett medlemsapp som växer och frodas</h2>
         <p>I syfte at hjälpa skogsägare att skapa sig en överblick över sina fastighet och vidta viktiga åtgärder sjösattes appen "Min Skogsgård" tillsammans med ett team fråån Dizparc i Växjö.</p>
-        </div><i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-arrow-right"></i></div>
         <img id="trees" src="images/trees.webp">
     </a>
 </section>
@@ -146,7 +147,8 @@
     <b>PROTON GROUP</b><div class="border"></div>
     <h3>Ett affärssystem i takt med en föränderlig värld</h3></div>
     </a>
-    </div>        
+    </div>
+
 </section>
 
 <!-- Section 7 - "HOLMGRENS BIL" -->
@@ -163,11 +165,11 @@
 <!-- Section 8 - "Entreprenörer" -->
 <section class="section goals">
     <div class="container">
-        <h1>Av drivna entreprenörer,<br> för drivna entreprenörer</h1><div class="yellow-dot"></div>
+        <h1>Av drivna entreprenörer, för drivna entreprenörer</h1><div class="yellow-dot"></div>
         <p><br>Sedan starten 2016 har Dizparc byggts av våra drivna entreprenörer. Tillsammans har de lagt grunden för en imponerande tillväxtresa med siktet inställt på att bli ett av de ledande företagen inom IT och digitalisering på den svenska marknaden.<br><br></p>
-        <a class="btn-green" href="https://dizparc.se/entreprenor">Om Entreprenörsresan</a>
+        <a class="btn-green entre" href="https://dizparc.se/entreprenor">Om Entreprenörsresan</a>
     </div>
-    <img src="images/two-woman-talking.webp" alt="Four people holding each other at sunrise">
+    <img id="entreprenors" src="images/two-woman-talking.webp" alt="Two young women talking to each other">
 </section>
 
 <!-- Section 9 - "Våra marknader" -->
@@ -342,7 +344,7 @@
     <a class="container-case" href="https://dizparc.se/case/sodra"><div class="text-container">
         <b>INNOVATION</b>
         <div class="border"></div>
-        <h2>Grönt är skönt - drömmen om gröna affärer. projekt och konsulttjänster</h2>
+        <h2>Grönt är skönt - drömmen om gröna affärer. Projekt och konsulttjänster</h2>
         <br><br><div class="btn-green" ">Läs mer</div>
         </div>
         <img id="trees" src="images/woman-in-plants.webp">
@@ -386,7 +388,7 @@
 <!-- FOOTER -->
 <section class="section footer">
     <img id="logo-footer" src="images/dizpiac-logo-big.png" alt="Dizparc logotype">
-    <div>
+    <div class="socialmedia">
         <a href="https://www.facebook.com/dizparc"><b>FACEBOOK</b></a>
         <a href="https://www.instagram.com/dizparc/"><b>INSTAGRAM</b></a>
         <a href="https://www.linkedin.com/company/dizparc/"><b>LINKEDIN</b></a>
@@ -396,8 +398,9 @@
     </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"></script>
+
 <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
 </html>
