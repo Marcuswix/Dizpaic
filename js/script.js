@@ -55,4 +55,40 @@ window.addEventListener("scroll", function()
   }
 )
 
+// Open up Submenu "Erbjudanden"
+const showSubmenuDeals = document.getElementById("submenu-deals")
+const faGreaterThanDeals = document.getElementById("fa-greater-than-deals")
+
+function showHideSubmenuDeals()
+{
+  if (showSubmenuDeals.classList.contains("hide"))
+  {
+    showSubmenuDeals.classList.remove("hide")
+    faGreaterThanDeals.classList.add("rotate")
+  }
+
+  else
+  {
+    showSubmenuDeals.classList.add("hide")
+    faGreaterThanDeals.classList.remove("rotate")
+  }
+}
+
+const submenuOffice = document.getElementById("submenu-office")
+const faGreaterThanOffice = document.getElementById("fa-greater-than-office")
+
+function showHideSubmenuOffice()
+{
+  if (submenuOffice.classList.contains("hide"))
+  {
+    submenuOffice.classList.remove("hide")
+    faGreaterThanOffice.classList.add("rotate")
+  }
+
+  else
+  {
+    submenuOffice.classList.add("hide")
+    faGreaterThanOffice.classList.remove("rotate")
+  }
+}
 

@@ -35,12 +35,25 @@
         <nav id="menu" class="">
           <ul class="menu">
             <a href="index.html"><li><img id="logotype-menu" src="images/dizpiac-logo-big.png" alt="Dizparc logotype"></li></a>
-            <a href="https://dizparc.se/erbjudande"><li>Erbjudande</li></a>
-            <a href="https://dizparc.se/case"><li>Case</li></a>
-            <a href="https://dizparc.se/case"><li>Jobb</li></a>
-            <a href="https://dizparc.se/nyheter-och-event"><li>Nyheter & Event</li></a>
-            <a href="https://dizparc.se/om-oss"><li>Om Oss</li></a>
-            <a href="https://dizparc.se/hallbarhet"><li>Hållbarhet</li></a>
+            <li><div class="main-navigation-row"><a href="https://dizparc.se/erbjudande">Erbjudande</a><button id="btn-deals" onclick="showHideSubmenuDeals()"><i id="fa-greater-than-deals" class="fa-solid fa-greater-than rotate"></i></button></div>
+            </li>
+                <ul id="submenu-deals" class="submenu hide">
+                <li><a href="#">Digitala Upplevelser</a></li>
+                <li><a href="#">Moln & Infrastruktur</a></li>
+                <li><a href="#">Insikter & Lösningar</a></li>
+                <li><a href="#">Cybersäkerhet</a></li>
+                </ul>
+
+            <li><a href="https://dizparc.se/case">Case</li></a>
+            <li><a href="https://dizparc.se/case">Jobb</li></a>
+            <li><a href="https://dizparc.se/entreprenor">Entreprenörer</li></a>
+            <li><a href="https://dizparc.se/nyheter-och-event">Nyheter & Event</li></a>
+            <li><div class="main-navigation-row"><a href="https://dizparc.se/om-oss">Om Oss</a><button id="btn-deals" onclick="showHideSubmenuOffice()"><i id="fa-greater-than-office" class="fa-solid fa-greater-than rotate"></i></button></div></li>
+                <ul id="submenu-office" class="submenu hide">
+                    <li><a href="">Våra kontor</a>
+                    </li>
+                </ul>
+            <li><a href="https://dizparc.se/hallbarhet">Hållbarhet</li></a>
           </ul>
         </nav>
 </section>

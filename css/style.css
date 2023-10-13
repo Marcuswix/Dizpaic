@@ -155,7 +155,7 @@ h2::after {
 }
 .header #menu-btn:hover {
   background-color: rgba(255, 255, 255, 0.225);
-  box-shadow: 0 0 12px 1px rgba(255, 255, 255, 0.477);
+  box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.477);
 }
 .header #menu-btn i {
   margin-right: 0.5rem;
@@ -226,7 +226,6 @@ h2::after {
   width: 25%;
   position: fixed;
   top: 0;
-  left: 0;
   background-color: #140B26;
   padding: 0;
   z-index: 2;
@@ -249,6 +248,7 @@ h2::after {
   width: 30%;
   height: auto;
   padding-top: 1rem;
+  margin-left: 1rem;
 }
 @media (max-width: 768px) {
   .outer-menu #logotype-menu {
@@ -256,13 +256,63 @@ h2::after {
   }
 }
 .outer-menu .menu li {
-  padding: 1.5rem;
+  padding: 0;
   color: white;
   list-style-type: none;
   border: solid 1px #281B44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 .outer-menu .menu li:hover {
   background-color: #281B44;
+}
+.outer-menu a {
+  padding: 1.5rem;
+  width: 100%;
+}
+.outer-menu #btn-deals {
+  background-color: transparent;
+  padding-block: 1.5rem;
+  padding-inline: 2rem;
+  border: none;
+  border-left: solid 2px #281B44;
+  color: whitesmoke;
+}
+.outer-menu #btn-deals .fa-solid.fa-greater-than {
+  transform: rotate(0deg);
+  transition: transform ease-in-out 100ms;
+}
+.outer-menu #btn-deals .rotate {
+  transform: rotate(90deg) !important;
+}
+.outer-menu .submenu {
+  background-color: #291C45;
+  opacity: 1;
+  position: relative;
+  left: 0;
+  transition: display ease-in-out 1200ms;
+}
+.outer-menu .submenu li {
+  padding-left: 1rem;
+  border-block: solid 1px #181029;
+  transition: background-color ease-in-out 80ms;
+}
+.outer-menu .submenu li:hover {
+  background-color: #1f1635;
+}
+.outer-menu .hide {
+  display: none;
+  left: -100%;
+}
+
+.main-navigation-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
 }
 
 .showcase {
